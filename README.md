@@ -6,6 +6,8 @@ MorphXR is een proof of concept voor een XR body tracking systeem. Dit is geschr
 ## Inhoudsopgave 
 * [Algemene informatie](#algemene-informatie)
 * [Technologieën](#technologieën)
+* [Concept](#concept)
+* [Conclusie](#conclusie)
 * [Auteur](#auteur)
 * [Licentie](#licentie)
 
