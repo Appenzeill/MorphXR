@@ -23,7 +23,7 @@ int main( void ){
   oled_arm arm = oled_arm(i2c_bus, 0x3c);
 
   for(;;) {
-    //arm.drawArm(bovenarm,onderarm);
-    arm.printArm(bovenarm,onderarm);
+    arm.drawArm(bovenarm,onderarm);
+    //arm.printArm(bovenarm,onderarm);
   }
 }

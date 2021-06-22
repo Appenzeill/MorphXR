@@ -4,7 +4,11 @@
 #include "../submodules/ipass-mpu6050/ipass-mpu6050.hpp"
 #include "toolbox.hpp"
 
-
+/// \brief
+/// oled_arm class
+/// \details
+/// Deze class is verantwoordelijk om de armen te schrijven op de oled.
+/// De klas is afhankelijk van de hwlib::glcd_oled class.
 class oled_arm {
 private:
   hwlib::i2c_bus & i2c_bus;
@@ -18,16 +22,25 @@ private:
 
 
 public:
+  /// \brief
+  /// Constructor van oled_arm.
+  /// \details
+  /// Deze constructer neemt 2 inputs, i2c_bus van hwlib en een uint_fast8_t address voor de i2c minion.
+  /// De klas is afhankelijk van de hwlib::glcd_oled class.
   oled_arm(hwlib::i2c_bus & i2c_bus, uint_fast8_t i2c_address ):
     i2c_bus( i2c_bus ),
     i2c_address( i2c_address)
   {}
 
+  /// \brief
+  /// Functie om de arm te tekenen op het oled scherm.
+  /// \details
+  /// De functie schrijft 2 armen naar het scherm. Hij pakt hiervoor de graden van de oled, en vertaalt deze naar pixels.
   void drawArm(mpu6050_diy & bovenarm, mpu6050_diy & onderarm ) {
     int start_x_onderarm;
     int bovenarm_lengte = 30;
     
-  toolbox toolbox;
+    toolbox toolbox;
     int bovenarm_x_graden = bovenarm.getAccelX();
     int start_x_bovenarm = 31;
     int capture_x_bovenarm   = toolbox.translateToScreenSize(bovenarm_x_graden);
@@ -100,55 +113,39 @@ public:
     display.flush();
   }
 
-  void printArm(mpu6050_diy & bovenarm, mpu6050_diy & onderarm) {
-    toolbox toolbox;
-    int bovenarm_y_graden = bovenarm.getGyroY();
-    int arm_lengte = 30; 
-    int arm_beweging = toolbox.armLength(bovenarm_y_graden, arm_lengte);
-    // if (arm_beweging >= 30) {
-    //   private_arm_length += arm_beweging;
-    // } else {
-    //   private_arm_length -= arm_beweging;
-    // }
-
-    // if ( arm_beweging < 29 ) {
-    //   if (private_arm_length >= 0) {
-    // 	int tmp = arm_lengte - arm_beweging;
-    // 	private_arm_length -= tmp;
-    //   }
-    // } else if (arm_beweging < 31) {
-    //   if (private_arm_length <= arm_lengte) {
-    // 	int tmp = arm_lengte - arm_beweging;
-    // 	private_arm_length += tmp;
-    //   }
-    // }    
-
-    // if ( arm_beweging < 29 ) {
-    //   if (private_arm_length >= 0) {
-    // 	int tmp = arm_lengte - arm_beweging;
-    // 	private_arm_length -= tmp;
-    //   }
-    // } else if (arm_beweging < 31) {
-    //   if (private_arm_length <= arm_lengte) {
-    // 	int tmp = arm_lengte - arm_beweging;
-    // 	private_arm_length += tmp;
-    //   }
-    // }    
-
-    if (arm_beweging < 29) {
-      private_arm_length -= (arm_lengte - arm_beweging);
-    } else if ( arm_beweging > 31) {
-      private_arm_length += (arm_lengte - arm_beweging);
-    }
+  /// \brief
+  /// Functie gyroscoop waarden van een mpu6050 sensor op een oled te printen.
+  /// \details
+  /// Deze functie print de X, Y en Z waarden van de gyroscoop uit.
+  void printArmGyro(mpu6050_diy & arm) {
+    int arm_x_accel = arm.getGyroX();
+    int arm_y_accel = arm.getGyroY();
+    int arm_z_accel = arm.getGyroZ();
 
     terminal_display 
-      << "\f" << toolbox.armLength(bovenarm_y_graden, arm_lengte)
-      << "\n" << arm_lengte
-      << "\t0003" << bovenarm_y_graden
-      << "\t0004" << private_arm_length
-
+      << "\f" << arm_x_accel
+      << "\n" << arm_y_accel
+      << "\t0003" << arm_z_accel
       << hwlib::flush;   
   }
+  
+  /// \brief
+  /// Functie acceleromater waarden van een mpu6050 sensor op een oled te printen.
+  /// \details
+  /// Deze functie print de X, Y en Z waarden uit van de acceleromater uit.
+  void printArmAccel(mpu6050_diy & arm) {
+    int arm_x_accel = arm.getGyroX();
+    int arm_y_accel = arm.getGyroY();
+    int arm_z_accel = arm.getGyroZ();
+
+    terminal_display 
+      << "\f" << arm_x_accel
+      << "\n" << arm_y_accel
+      << "\t0003" << arm_z_accel
+      << hwlib::flush;   
+  }
+
+
 };
 
 #endif

@@ -1,0 +1,78 @@
+\hypertarget{classoled__arm}{}\section{oled\+\_\+arm Class Reference}
+\label{classoled__arm}\index{oled\+\_\+arm@{oled\+\_\+arm}}
+
+
+\hyperlink{classoled__arm}{oled\+\_\+arm} class  
+
+
+
+
+{\ttfamily \#include $<$oled\+\_\+arm.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classoled__arm_a0d1436ad9431a1778767beef0510c908}{oled\+\_\+arm} (hwlib\+::i2c\+\_\+bus \&i2c\+\_\+bus, uint\+\_\+fast8\+\_\+t i2c\+\_\+address)
+\begin{DoxyCompactList}\small\item\em Constructor van \hyperlink{classoled__arm}{oled\+\_\+arm}. \end{DoxyCompactList}\item 
+void \hyperlink{classoled__arm_a5d43e95edefb6f7fc363f4da8d1c3b1e}{draw\+Arm} (mpu6050\+\_\+diy \&bovenarm, mpu6050\+\_\+diy \&onderarm)
+\begin{DoxyCompactList}\small\item\em Functie om de arm te tekenen op het oled scherm. \end{DoxyCompactList}\item 
+void \hyperlink{classoled__arm_a35bcedc3e023c1744420fdc377ca980c}{print\+Arm\+Gyro} (mpu6050\+\_\+diy \&arm)
+\begin{DoxyCompactList}\small\item\em Functie gyroscoop waarden van een mpu6050 sensor op een oled te printen. \end{DoxyCompactList}\item 
+void \hyperlink{classoled__arm_ae5eecd55d90a5c6137bfc4cef0cbcb2f}{print\+Arm\+Accel} (mpu6050\+\_\+diy \&arm)
+\begin{DoxyCompactList}\small\item\em Functie acceleromater waarden van een mpu6050 sensor op een oled te printen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classoled__arm}{oled\+\_\+arm} class 
+
+Deze class is verantwoordelijk om de armen te schrijven op de oled. De klas is afhankelijk van de hwlib\+::glcd\+\_\+oled class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classoled__arm_a0d1436ad9431a1778767beef0510c908}\label{classoled__arm_a0d1436ad9431a1778767beef0510c908}} 
+\index{oled\+\_\+arm@{oled\+\_\+arm}!oled\+\_\+arm@{oled\+\_\+arm}}
+\index{oled\+\_\+arm@{oled\+\_\+arm}!oled\+\_\+arm@{oled\+\_\+arm}}
+\subsubsection{\texorpdfstring{oled\+\_\+arm()}{oled\_arm()}}
+{\footnotesize\ttfamily oled\+\_\+arm\+::oled\+\_\+arm (\begin{DoxyParamCaption}\item[{hwlib\+::i2c\+\_\+bus \&}]{i2c\+\_\+bus,  }\item[{uint\+\_\+fast8\+\_\+t}]{i2c\+\_\+address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor van \hyperlink{classoled__arm}{oled\+\_\+arm}. 
+
+Deze constructer neemt 2 inputs, i2c\+\_\+bus van hwlib en een uint\+\_\+fast8\+\_\+t address voor de i2c minion. De klas is afhankelijk van de hwlib\+::glcd\+\_\+oled class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classoled__arm_a5d43e95edefb6f7fc363f4da8d1c3b1e}\label{classoled__arm_a5d43e95edefb6f7fc363f4da8d1c3b1e}} 
+\index{oled\+\_\+arm@{oled\+\_\+arm}!draw\+Arm@{draw\+Arm}}
+\index{draw\+Arm@{draw\+Arm}!oled\+\_\+arm@{oled\+\_\+arm}}
+\subsubsection{\texorpdfstring{draw\+Arm()}{drawArm()}}
+{\footnotesize\ttfamily void oled\+\_\+arm\+::draw\+Arm (\begin{DoxyParamCaption}\item[{mpu6050\+\_\+diy \&}]{bovenarm,  }\item[{mpu6050\+\_\+diy \&}]{onderarm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functie om de arm te tekenen op het oled scherm. 
+
+De functie schrijft 2 armen naar het scherm. Hij pakt hiervoor de graden van de oled, en vertaalt deze naar pixels. \mbox{\Hypertarget{classoled__arm_ae5eecd55d90a5c6137bfc4cef0cbcb2f}\label{classoled__arm_ae5eecd55d90a5c6137bfc4cef0cbcb2f}} 
+\index{oled\+\_\+arm@{oled\+\_\+arm}!print\+Arm\+Accel@{print\+Arm\+Accel}}
+\index{print\+Arm\+Accel@{print\+Arm\+Accel}!oled\+\_\+arm@{oled\+\_\+arm}}
+\subsubsection{\texorpdfstring{print\+Arm\+Accel()}{printArmAccel()}}
+{\footnotesize\ttfamily void oled\+\_\+arm\+::print\+Arm\+Accel (\begin{DoxyParamCaption}\item[{mpu6050\+\_\+diy \&}]{arm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functie acceleromater waarden van een mpu6050 sensor op een oled te printen. 
+
+Deze functie print de X, Y en Z waarden uit van de acceleromater uit. \mbox{\Hypertarget{classoled__arm_a35bcedc3e023c1744420fdc377ca980c}\label{classoled__arm_a35bcedc3e023c1744420fdc377ca980c}} 
+\index{oled\+\_\+arm@{oled\+\_\+arm}!print\+Arm\+Gyro@{print\+Arm\+Gyro}}
+\index{print\+Arm\+Gyro@{print\+Arm\+Gyro}!oled\+\_\+arm@{oled\+\_\+arm}}
+\subsubsection{\texorpdfstring{print\+Arm\+Gyro()}{printArmGyro()}}
+{\footnotesize\ttfamily void oled\+\_\+arm\+::print\+Arm\+Gyro (\begin{DoxyParamCaption}\item[{mpu6050\+\_\+diy \&}]{arm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functie gyroscoop waarden van een mpu6050 sensor op een oled te printen. 
+
+Deze functie print de X, Y en Z waarden van de gyroscoop uit. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/daan/\+School Opdrachten/\+I\+P\+A\+S\+S/\+Morph\+X\+R/arduino/src/oled\+\_\+arm.\+hpp\end{DoxyCompactItemize}
