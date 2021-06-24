@@ -79,12 +79,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d43e95edefb6f7fc363f4da8d1c3b1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoled__arm.html#a5d43e95edefb6f7fc363f4da8d1c3b1e">drawArm</a> (mpu6050_diy &amp;bovenarm, mpu6050_diy &amp;onderarm)</td></tr>
 <tr class="memdesc:a5d43e95edefb6f7fc363f4da8d1c3b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functie om de arm te tekenen op het oled scherm.  <a href="#a5d43e95edefb6f7fc363f4da8d1c3b1e">More...</a><br /></td></tr>
 <tr class="separator:a5d43e95edefb6f7fc363f4da8d1c3b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1703c08a80dd80a30fdaad12694af74f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoled__arm.html#a1703c08a80dd80a30fdaad12694af74f">printArm</a> (mpu6050_diy &amp;bovenarm, mpu6050_diy &amp;onderarm)</td></tr>
+<tr class="memdesc:a1703c08a80dd80a30fdaad12694af74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functie om tekst met de waarde van een arm af te drukken.  <a href="#a1703c08a80dd80a30fdaad12694af74f">More...</a><br /></td></tr>
+<tr class="separator:a1703c08a80dd80a30fdaad12694af74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35bcedc3e023c1744420fdc377ca980c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoled__arm.html#a35bcedc3e023c1744420fdc377ca980c">printArmGyro</a> (mpu6050_diy &amp;arm)</td></tr>
 <tr class="memdesc:a35bcedc3e023c1744420fdc377ca980c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functie gyroscoop waarden van een mpu6050 sensor op een oled te printen.  <a href="#a35bcedc3e023c1744420fdc377ca980c">More...</a><br /></td></tr>
 <tr class="separator:a35bcedc3e023c1744420fdc377ca980c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5eecd55d90a5c6137bfc4cef0cbcb2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoled__arm.html#ae5eecd55d90a5c6137bfc4cef0cbcb2f">printArmAccel</a> (mpu6050_diy &amp;arm)</td></tr>
 <tr class="memdesc:ae5eecd55d90a5c6137bfc4cef0cbcb2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functie acceleromater waarden van een mpu6050 sensor op een oled te printen.  <a href="#ae5eecd55d90a5c6137bfc4cef0cbcb2f">More...</a><br /></td></tr>
 <tr class="separator:ae5eecd55d90a5c6137bfc4cef0cbcb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bb3a852d58e7febdf07d7342199813a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoled__arm.html#a4bb3a852d58e7febdf07d7342199813a">printArmLength</a> (mpu6050_diy &amp;arm)</td></tr>
+<tr class="memdesc:a4bb3a852d58e7febdf07d7342199813a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functie om arm lengte van de onderarm uit te printen.  <a href="#a4bb3a852d58e7febdf07d7342199813a">More...</a><br /></td></tr>
+<tr class="separator:a4bb3a852d58e7febdf07d7342199813a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classoled__arm.html" title="oled_arm class ">oled_arm</a> class </p>
@@ -169,6 +175,45 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a1703c08a80dd80a30fdaad12694af74f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1703c08a80dd80a30fdaad12694af74f">&#9670;&nbsp;</a></span>printArm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oled_arm::printArm </td>
+          <td>(</td>
+          <td class="paramtype">mpu6050_diy &amp;&#160;</td>
+          <td class="paramname"><em>bovenarm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mpu6050_diy &amp;&#160;</td>
+          <td class="paramname"><em>onderarm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Functie om tekst met de waarde van een arm af te drukken. </p>
+<p>Deze functie De klas is afhankelijk van de hwlib::glcd_oled class. </p>
+
+</div>
+</div>
 <a id="ae5eecd55d90a5c6137bfc4cef0cbcb2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5eecd55d90a5c6137bfc4cef0cbcb2f">&#9670;&nbsp;</a></span>printArmAccel()</h2>
 
@@ -224,6 +269,35 @@ Public Member Functions</h2></td></tr>
 
 <p>Functie gyroscoop waarden van een mpu6050 sensor op een oled te printen. </p>
 <p>Deze functie print de X, Y en Z waarden van de gyroscoop uit. </p>
+
+</div>
+</div>
+<a id="a4bb3a852d58e7febdf07d7342199813a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bb3a852d58e7febdf07d7342199813a">&#9670;&nbsp;</a></span>printArmLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oled_arm::printArmLength </td>
+          <td>(</td>
+          <td class="paramtype">mpu6050_diy &amp;&#160;</td>
+          <td class="paramname"><em>arm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Functie om arm lengte van de onderarm uit te printen. </p>
+<p>Deze functie de lengte van de onderarm uit. </p>
 
 </div>
 </div>

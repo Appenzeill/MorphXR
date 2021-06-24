@@ -16,10 +16,14 @@
 \begin{DoxyCompactList}\small\item\em Constructor van \hyperlink{classoled__arm}{oled\+\_\+arm}. \end{DoxyCompactList}\item 
 void \hyperlink{classoled__arm_a5d43e95edefb6f7fc363f4da8d1c3b1e}{draw\+Arm} (mpu6050\+\_\+diy \&bovenarm, mpu6050\+\_\+diy \&onderarm)
 \begin{DoxyCompactList}\small\item\em Functie om de arm te tekenen op het oled scherm. \end{DoxyCompactList}\item 
+void \hyperlink{classoled__arm_a1703c08a80dd80a30fdaad12694af74f}{print\+Arm} (mpu6050\+\_\+diy \&bovenarm, mpu6050\+\_\+diy \&onderarm)
+\begin{DoxyCompactList}\small\item\em Functie om tekst met de waarde van een arm af te drukken. \end{DoxyCompactList}\item 
 void \hyperlink{classoled__arm_a35bcedc3e023c1744420fdc377ca980c}{print\+Arm\+Gyro} (mpu6050\+\_\+diy \&arm)
 \begin{DoxyCompactList}\small\item\em Functie gyroscoop waarden van een mpu6050 sensor op een oled te printen. \end{DoxyCompactList}\item 
 void \hyperlink{classoled__arm_ae5eecd55d90a5c6137bfc4cef0cbcb2f}{print\+Arm\+Accel} (mpu6050\+\_\+diy \&arm)
-\begin{DoxyCompactList}\small\item\em Functie acceleromater waarden van een mpu6050 sensor op een oled te printen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Functie acceleromater waarden van een mpu6050 sensor op een oled te printen. \end{DoxyCompactList}\item 
+void \hyperlink{classoled__arm_a4bb3a852d58e7febdf07d7342199813a}{print\+Arm\+Length} (mpu6050\+\_\+diy \&arm)
+\begin{DoxyCompactList}\small\item\em Functie om arm lengte van de onderarm uit te printen. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -51,7 +55,17 @@ Deze constructer neemt 2 inputs, i2c\+\_\+bus van hwlib en een uint\+\_\+fast8\+
 
 Functie om de arm te tekenen op het oled scherm. 
 
-De functie schrijft 2 armen naar het scherm. Hij pakt hiervoor de graden van de oled, en vertaalt deze naar pixels. \mbox{\Hypertarget{classoled__arm_ae5eecd55d90a5c6137bfc4cef0cbcb2f}\label{classoled__arm_ae5eecd55d90a5c6137bfc4cef0cbcb2f}} 
+De functie schrijft 2 armen naar het scherm. Hij pakt hiervoor de graden van de oled, en vertaalt deze naar pixels. \mbox{\Hypertarget{classoled__arm_a1703c08a80dd80a30fdaad12694af74f}\label{classoled__arm_a1703c08a80dd80a30fdaad12694af74f}} 
+\index{oled\+\_\+arm@{oled\+\_\+arm}!print\+Arm@{print\+Arm}}
+\index{print\+Arm@{print\+Arm}!oled\+\_\+arm@{oled\+\_\+arm}}
+\subsubsection{\texorpdfstring{print\+Arm()}{printArm()}}
+{\footnotesize\ttfamily void oled\+\_\+arm\+::print\+Arm (\begin{DoxyParamCaption}\item[{mpu6050\+\_\+diy \&}]{bovenarm,  }\item[{mpu6050\+\_\+diy \&}]{onderarm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functie om tekst met de waarde van een arm af te drukken. 
+
+Deze functie De klas is afhankelijk van de hwlib\+::glcd\+\_\+oled class. \mbox{\Hypertarget{classoled__arm_ae5eecd55d90a5c6137bfc4cef0cbcb2f}\label{classoled__arm_ae5eecd55d90a5c6137bfc4cef0cbcb2f}} 
 \index{oled\+\_\+arm@{oled\+\_\+arm}!print\+Arm\+Accel@{print\+Arm\+Accel}}
 \index{print\+Arm\+Accel@{print\+Arm\+Accel}!oled\+\_\+arm@{oled\+\_\+arm}}
 \subsubsection{\texorpdfstring{print\+Arm\+Accel()}{printArmAccel()}}
@@ -71,7 +85,17 @@ Deze functie print de X, Y en Z waarden uit van de acceleromater uit. \mbox{\Hyp
 
 Functie gyroscoop waarden van een mpu6050 sensor op een oled te printen. 
 
-Deze functie print de X, Y en Z waarden van de gyroscoop uit. 
+Deze functie print de X, Y en Z waarden van de gyroscoop uit. \mbox{\Hypertarget{classoled__arm_a4bb3a852d58e7febdf07d7342199813a}\label{classoled__arm_a4bb3a852d58e7febdf07d7342199813a}} 
+\index{oled\+\_\+arm@{oled\+\_\+arm}!print\+Arm\+Length@{print\+Arm\+Length}}
+\index{print\+Arm\+Length@{print\+Arm\+Length}!oled\+\_\+arm@{oled\+\_\+arm}}
+\subsubsection{\texorpdfstring{print\+Arm\+Length()}{printArmLength()}}
+{\footnotesize\ttfamily void oled\+\_\+arm\+::print\+Arm\+Length (\begin{DoxyParamCaption}\item[{mpu6050\+\_\+diy \&}]{arm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functie om arm lengte van de onderarm uit te printen. 
+
+Deze functie de lengte van de onderarm uit. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
