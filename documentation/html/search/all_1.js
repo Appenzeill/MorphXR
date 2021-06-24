@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['oled_5farm',['oled_arm',['../classoled__arm.html',1,'oled_arm'],['../classoled__arm.html#a0d1436ad9431a1778767beef0510c908',1,'oled_arm::oled_arm()']]]
+  ['difference',['difference',['../classtoolbox.html#a99cefed812481a44f45bd795d1c4c1f2',1,'toolbox']]],
+  ['drawarm',['drawArm',['../classoled__arm.html#a5d43e95edefb6f7fc363f4da8d1c3b1e',1,'oled_arm']]]
 ];

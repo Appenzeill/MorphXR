@@ -1,24 +1,89 @@
 \hypertarget{classtoolbox}{}\section{toolbox Class Reference}
 \label{classtoolbox}\index{toolbox@{toolbox}}
+
+
+toolbox class  
+
+
+
+
+{\ttfamily \#include $<$toolbox.\+hpp$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classtoolbox_a59244902aefc121a12afec6baa8e1e87}\label{classtoolbox_a59244902aefc121a12afec6baa8e1e87}} 
-int {\bfseries translate\+To\+Screen\+Size} (int graden)
-\item 
-\mbox{\Hypertarget{classtoolbox_a99cefed812481a44f45bd795d1c4c1f2}\label{classtoolbox_a99cefed812481a44f45bd795d1c4c1f2}} 
-double {\bfseries difference} (int start, int end)
-\item 
-\mbox{\Hypertarget{classtoolbox_a4917b28e63e41f052b25297e4d77f2b9}\label{classtoolbox_a4917b28e63e41f052b25297e4d77f2b9}} 
-int {\bfseries steps} (int start, double end)
-\item 
-\mbox{\Hypertarget{classtoolbox_a9a2412a49c1268f8413c1fb580edc042}\label{classtoolbox_a9a2412a49c1268f8413c1fb580edc042}} 
-int {\bfseries arm\+Length} (int accel\+\_\+y, int arm\+\_\+length)
-\item 
-\mbox{\Hypertarget{classtoolbox_a2acc8f839bfb0363e2ef9dd2cb917101}\label{classtoolbox_a2acc8f839bfb0363e2ef9dd2cb917101}} 
-int {\bfseries arm\+Length\+Forearm} (int forearm, int forearm\+\_\+y)
-\end{DoxyCompactItemize}
+\hyperlink{classtoolbox_ae52c33dc9f80c6ce0208a70abde2418e}{toolbox} ()
+\begin{DoxyCompactList}\small\item\em Toolbox constructor. \end{DoxyCompactList}\item 
+int \hyperlink{classtoolbox_a59244902aefc121a12afec6baa8e1e87}{translate\+To\+Screen\+Size} (int graden)
+\begin{DoxyCompactList}\small\item\em Functie om graden te converten naar pixels voor het oled scherm. \end{DoxyCompactList}\item 
+double \hyperlink{classtoolbox_a99cefed812481a44f45bd795d1c4c1f2}{difference} (int start, int end)
+\begin{DoxyCompactList}\small\item\em Functie om het verschil tussen 2 ints uit te rekenen. \end{DoxyCompactList}\item 
+int \hyperlink{classtoolbox_a4917b28e63e41f052b25297e4d77f2b9}{steps} (int start, double end)
+\begin{DoxyCompactList}\small\item\em Functie om start en end met elkaar te delen. \end{DoxyCompactList}\item 
+int \hyperlink{classtoolbox_a9a2412a49c1268f8413c1fb580edc042}{arm\+Length} (int accel\+\_\+y, int arm\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Functie om uit te rekenen hoelang een arm is. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+toolbox class 
+
+Toolbox is gemaakt als functies los te koppelen van de arduino als dit nodig is. Toolbox is primair bedoeld voor korte simpele functies die getest moeten kunnen worden zonder een arduino. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtoolbox_ae52c33dc9f80c6ce0208a70abde2418e}\label{classtoolbox_ae52c33dc9f80c6ce0208a70abde2418e}} 
+\index{toolbox@{toolbox}!toolbox@{toolbox}}
+\index{toolbox@{toolbox}!toolbox@{toolbox}}
+\subsubsection{\texorpdfstring{toolbox()}{toolbox()}}
+{\footnotesize\ttfamily toolbox\+::toolbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Toolbox constructor. 
+
+Deze functie heeft geen parameters. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtoolbox_a9a2412a49c1268f8413c1fb580edc042}\label{classtoolbox_a9a2412a49c1268f8413c1fb580edc042}} 
+\index{toolbox@{toolbox}!arm\+Length@{arm\+Length}}
+\index{arm\+Length@{arm\+Length}!toolbox@{toolbox}}
+\subsubsection{\texorpdfstring{arm\+Length()}{armLength()}}
+{\footnotesize\ttfamily int toolbox\+::arm\+Length (\begin{DoxyParamCaption}\item[{int}]{accel\+\_\+y,  }\item[{int}]{arm\+\_\+length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functie om uit te rekenen hoelang een arm is. 
+
+Deze funtie returned de de lengte van een arm doormiddel van int accel\+\_\+y en int arm\+\_\+length \mbox{\Hypertarget{classtoolbox_a99cefed812481a44f45bd795d1c4c1f2}\label{classtoolbox_a99cefed812481a44f45bd795d1c4c1f2}} 
+\index{toolbox@{toolbox}!difference@{difference}}
+\index{difference@{difference}!toolbox@{toolbox}}
+\subsubsection{\texorpdfstring{difference()}{difference()}}
+{\footnotesize\ttfamily double toolbox\+::difference (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functie om het verschil tussen 2 ints uit te rekenen. 
+
+Deze funtie returned het verschill tussen int start en int end. \mbox{\Hypertarget{classtoolbox_a4917b28e63e41f052b25297e4d77f2b9}\label{classtoolbox_a4917b28e63e41f052b25297e4d77f2b9}} 
+\index{toolbox@{toolbox}!steps@{steps}}
+\index{steps@{steps}!toolbox@{toolbox}}
+\subsubsection{\texorpdfstring{steps()}{steps()}}
+{\footnotesize\ttfamily int toolbox\+::steps (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{double}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functie om start en end met elkaar te delen. 
+
+Deze funtie returned int start gedeeld door double end. \mbox{\Hypertarget{classtoolbox_a59244902aefc121a12afec6baa8e1e87}\label{classtoolbox_a59244902aefc121a12afec6baa8e1e87}} 
+\index{toolbox@{toolbox}!translate\+To\+Screen\+Size@{translate\+To\+Screen\+Size}}
+\index{translate\+To\+Screen\+Size@{translate\+To\+Screen\+Size}!toolbox@{toolbox}}
+\subsubsection{\texorpdfstring{translate\+To\+Screen\+Size()}{translateToScreenSize()}}
+{\footnotesize\ttfamily int toolbox\+::translate\+To\+Screen\+Size (\begin{DoxyParamCaption}\item[{int}]{graden }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Functie om graden te converten naar pixels voor het oled scherm. 
+
+Deze funtie returned de hoeveelheid pixels in verhouding met graden terug voor het oled scherm. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
