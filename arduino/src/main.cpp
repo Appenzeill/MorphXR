@@ -24,6 +24,9 @@ int main( void ){
 
   for(;;) {
     arm.drawArm(bovenarm,onderarm);
-    //arm.printArm(bovenarm,onderarm);
+    //arm.printArmAccel(onderarm);
+    //arm.printNewArm(onderarm);
+    //arm.printArmLength(onderarm);
+
   }
 }
