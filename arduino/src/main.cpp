@@ -3,7 +3,7 @@
 #include <vector>
 #include "oled_arm.hpp"
 #include "toolbox.hpp"
-//#include "serial.hpp"
+#include "serial.hpp"
 
 int main( void ){	
   hwlib::wait_ms( 500 );   
@@ -21,9 +21,12 @@ int main( void ){
   onderarm.wakeup();
 
   oled_arm arm = oled_arm(i2c_bus, 0x3c);
+  serial_arm serial = serial_arm();
 
   for(;;) {
-    arm.drawArm(bovenarm,onderarm);
+    arm.drawArm(bovenarm, onderarm);
+    serial.sendData(bovenarm, onderarm);
+    
     //arm.printArmAccel(onderarm);
     //arm.printNewArm(onderarm);
     //arm.printArmLength(onderarm);

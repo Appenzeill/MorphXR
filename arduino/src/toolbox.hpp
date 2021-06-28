@@ -8,7 +8,6 @@
 /// Toolbox is primair bedoeld voor korte simpele functies die getest moeten kunnen worden zonder een arduino.
 class toolbox {
 public:
-
   /// \brief
   ///  Toolbox constructor
   /// \details

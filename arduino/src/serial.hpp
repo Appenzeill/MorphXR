@@ -1,74 +1,57 @@
-#ifndef SERIAL_HPP
-#define SERIAL_HPP
+#ifndef SERIAL_ARM_HPP
+#define SERIAL_ARM_HPP
 
+#include <string>
 
-class serial {
+class serial_arm {
 private:
-  mpu6050_diy & mpu6050;
+  std::string location;
+  int baudrate, timeout;
 
 public:
-  serial(mpu6050_diy & mpu6050):
-    mpu6050_diy(mpu6050)
+  serial_arm()
   {}
 
-  void sendAccelX() {
-    //int16_t bovenarm_x = mpu6050.getAccelX();
-    //int bovenarm_x_graden = (bovenarm_x + 250) / 2.77777777;
-  }
-  bool oi() {
-    return 1;
+  void sendData(mpu6050_diy & bovenarm, mpu6050_diy & onderarm) {
+    // bovenarm data
+    hwlib::cout << "a"
+		<< bovenarm.getGyroX()
+		<< ","
+		<< bovenarm.getGyroY()
+		<< ","
+		<< bovenarm.getGyroZ()
+		<< "*"
+		<< bovenarm.getAccelX()
+		<< ","
+		<< bovenarm.getAccelY()
+		<< ","
+		<< bovenarm.getAccelZ();
+
+    // Onderarm data
+    hwlib::cout << "b"
+		<< onderarm.getGyroX()
+		<< ","
+		<< onderarm.getGyroY()
+		<< ","
+		<< onderarm.getGyroZ()
+		<< "*"
+		<< onderarm.getAccelX()
+		<< ","
+		<< onderarm.getAccelY()
+		<< ","
+		<< onderarm.getAccelZ();
+
+
+
+
+    // hwlib::cout << bovenarm.getGyroX;
+    // hwlib::cout << ",";
+    // hwlib::cout << bovenarm.getGyroY;
+    // hwlib::cout << ",";
+    // hwlib::cout << bovenarm.getGyroZ;
+    // hwlib::cout << "]";
+
+
   }
 };
 #endif
-
-    // int16_t bovenarm_x = bovenarm.getAccelX();
-    // int bovenarm_x_graden = (bovenarm_x + 250) / 2.77777777;
-
-    // int16_t bovenarm_y = bovenarm.getAccelY();
-    // int bovenarm_y_graden = (bovenarm_y + 250) / 2.77777777;
-
-    // int16_t bovenarm_z = bovenarm.getAccelZ();
-    // int bovenarm_z_graden = (bovenarm_z + 250) / 2.77777777;
-
-    // int16_t bovenarm_x = bovenarm.getGyroX();
-    // int bovenarm_x_graden = (bovenarm_x + 250) / 2.77777777;
-
-    // int16_t bovenarm_y = bovenarm.getGyroY();
-    // int bovenarm_y_graden = (bovenarm_y + 250) / 2.77777777;
-
-    // int16_t bovenarm_z = bovenarm.getGyroZ();
-    // int bovenarm_z_graden = (bovenarm_z + 250) / 2.77777777;
-
-
-    // int16_t onderarm_x = onderarm.getAccelX();
-    // int onderarm_x_graden = (onderarm_x + 250) / 2.77777777;
-
-    // if (bovenarm_x_graden < 10 && bovenarm_x_graden > 0 ) {
-    //   hwlib::cout << "[00" << bovenarm_x_graden << "]";
-    // } else if (bovenarm_x_graden < 100  && bovenarm_x_graden > 0) {
-    //   hwlib::cout << "[0" << bovenarm_x_graden << "]";
-    // } else if (bovenarm_x_graden > 100  && bovenarm_x_graden > 0) {
-    //   hwlib::cout << "[" << bovenarm_x_graden << "]";
-    // } else if (bovenarm_x_graden < 0) {
-    //   hwlib::cout << "[000]";
-    // }
-
-    // if (bovenarm_y_graden < 10 && bovenarm_y_graden > 0 ) {
-    //   hwlib::cout << "[00" << bovenarm_y_graden << "]";
-    // } else if (bovenarm_y_graden < 100  && bovenarm_y_graden > 0) {
-    //   hwlib::cout << "[0" << bovenarm_y_graden << "]";
-    // } else if (bovenarm_y_graden > 100  && bovenarm_y_graden > 0) {
-    //   hwlib::cout << "[" << bovenarm_y_graden << "]";
-    // } else if (bovenarm_y_graden < 0) {
-    //   hwlib::cout << "[000]";
-    // }
-
-    // if (bovenarm_z_graden < 10 && bovenarm_z_graden > 0 ) {
-    //   hwlib::cout << "[00" << bovenarm_z_graden << "]";
-    // } else if (bovenarm_z_graden < 100  && bovenarm_z_graden > 0) {
-    //   hwlib::cout << "[0" << bovenarm_z_graden << "]";
-    // } else if (bovenarm_z_graden > 100  && bovenarm_z_graden > 0) {
-    //   hwlib::cout << "[" << bovenarm_z_graden << "]";
-    // } else if (bovenarm_z_graden < 0) {
-    //   hwlib::cout << "[000]";
-    // }
