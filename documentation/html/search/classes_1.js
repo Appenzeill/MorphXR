@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['serial',['serial',['../classserial.html',1,'']]]
+  ['serial_5farm',['serial_arm',['../classserial__arm.html',1,'']]]
 ];
