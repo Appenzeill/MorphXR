@@ -25,7 +25,9 @@ public:
 		<< ","
 		<< bovenarm.getAccelY()
 		<< ","
-		<< bovenarm.getAccelZ();
+		<< bovenarm.getAccelZ()
+		<< "x";
+
 
     // Onderarm data
     hwlib::cout << "b"
@@ -39,19 +41,8 @@ public:
 		<< ","
 		<< onderarm.getAccelY()
 		<< ","
-		<< onderarm.getAccelZ();
-
-
-
-
-    // hwlib::cout << bovenarm.getGyroX;
-    // hwlib::cout << ",";
-    // hwlib::cout << bovenarm.getGyroY;
-    // hwlib::cout << ",";
-    // hwlib::cout << bovenarm.getGyroZ;
-    // hwlib::cout << "]";
-
-
+		<< onderarm.getAccelZ()
+		<< "x";
   }
 };
 #endif
