@@ -1,4 +1,14 @@
 import serial
+import math
+import time
+import pickle
+
+import matplotlib as mpl
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+import matplotlib.pyplot as plt
+
+
 ser= serial.Serial('/dev/ttyACM0',2400, timeout=1)
 
 def rad():
@@ -8,16 +18,16 @@ def read(arm):
     tmp = ""
     while(True):
         read = rad()
-        if (read == "," or read == "*" or read == "a" or read == "b"):
+        if (read == "," or read == "*" or read == "x" ):
             break
-        else:
-            tmp += read
+        else:            tmp += read
     arm.append(int(tmp))
     return arm
         
-        
-bovenarm = []
-onderarm = []
+
+# clear file voor nieuwe data
+with open("arm.txt", 'r+') as f:
+    f.truncate(0)
 
 while(True):
     tmp = ""
@@ -40,12 +50,13 @@ while(True):
         onderarm = read(onderarm)
         onderarm = read(onderarm)
 
+    if (len(onderarm) != 0 and len(bovenarm) != 0):
+        arm = [bovenarm,onderarm]
+        # angle = 180 - onderarm[3] - 90
+        # print(angle)
+        with open("arm.txt", "wb") as fp: 
+            pickle.dump(arm, fp)
 
-    if (len(bovenarm) != 0):
-        print("bovenarm")
-        print(bovenarm)
-    if (len(onderarm) != 0):
-        print("onderarm")
-        print(onderarm)
+        
 
                 
