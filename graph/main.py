@@ -78,6 +78,7 @@ def animate(i):
     graph_data = read_arm()
     arm_length = 50
 
+    print(graph_data)
     # onderarm
     onderarm_angle = (180 - graph_data[1][3]) - 90 
     onderarm_sine_degrees = math.sin(math.radians(onderarm_angle))
@@ -91,6 +92,19 @@ def animate(i):
     onderarm_len_a = arm_length*arm_length
     onderarm_len_b = onderarm_z*onderarm_z
     onderarm_y = math.sqrt(onderarm_len_a - onderarm_len_b)
+
+    # x_start = 180
+    # x_end = 150
+    # x_total = x_start - x_end
+
+    
+    # # onderarm_x = (90 / x_total) * (graph_data[1][4] - x_end)
+
+    # onderarm_x = (90 / x_total) * (graph_data[1][4] - (x_end + 15))
+    # onderarm_x = 0
+
+
+    
     
     # bovenarm
     bovenarm_angle = (180 - graph_data[0][3]) - 90 
@@ -108,7 +122,7 @@ def animate(i):
 
     bovenarm_z = bovenarm_z + 50
     
-    X = [50,50,50]
+    X = [50,50, 50]
     Y = [0, bovenarm_y, bovenarm_y+onderarm_y]
     Z = [50,bovenarm_z ,bovenarm_z+onderarm_z]
     
