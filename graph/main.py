@@ -73,7 +73,6 @@ def graph():
         graph_data = read_arm()
         print(graph_data)
 
-
 def animate(i):
     graph_data = read_arm()
     arm_length = 50
@@ -93,19 +92,14 @@ def animate(i):
     onderarm_len_b = onderarm_z*onderarm_z
     onderarm_y = math.sqrt(onderarm_len_a - onderarm_len_b)
 
-    # x_start = 180
-    # x_end = 150
-    # x_total = x_start - x_end
+    x_start = 180
+    x_end = 150
+    x_total = x_start - x_end
 
-    
-    # # onderarm_x = (90 / x_total) * (graph_data[1][4] - x_end)
+    # experimentele horizontale as
+    # vervang de 3e 50 van X met onderarm_x
+    onderarm_x = (90 / x_total) * (graph_data[1][4] - (x_end + 15))
 
-    # onderarm_x = (90 / x_total) * (graph_data[1][4] - (x_end + 15))
-    # onderarm_x = 0
-
-
-    
-    
     # bovenarm
     bovenarm_angle = (180 - graph_data[0][3]) - 90 
     bovenarm_sine_degrees = math.sin(math.radians(bovenarm_angle))
@@ -122,7 +116,7 @@ def animate(i):
 
     bovenarm_z = bovenarm_z + 50
     
-    X = [50,50, 50]
+    X = [50,50,50]
     Y = [0, bovenarm_y, bovenarm_y+onderarm_y]
     Z = [50,bovenarm_z ,bovenarm_z+onderarm_z]
     
